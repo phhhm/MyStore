@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
-@ComponentScan({"controller", "service"})
+@ComponentScan(basePackages = {"controller", "service"})
 @EnableWebMvc
 public class DispacherServlet implements WebMvcConfigurer {
     @Bean

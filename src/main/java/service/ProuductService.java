@@ -3,24 +3,24 @@ package service;
 import model.Prouduct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.ProuductRepo;
+import repository.MyProductRepository;
 
 import java.util.List;
 
 @Service
 public class ProuductService {
     @Autowired
-    ProuductRepo prouductRepo;
+    MyProductRepository myProductRepository;
 
     public void save(Prouduct prouduct){
-        prouductRepo.save(prouduct);
+        myProductRepository.save(prouduct);
     }
 
     public List<Prouduct> getAll(){
-        return prouductRepo.getAll();
+        return myProductRepository.findAll();
     }
 
     public Prouduct findByName(String name){
-        return prouductRepo.findByName(name);
+        return myProductRepository.findByName(name);
     }
 }

@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Prouduct {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @NonNull
     @Column(name = "name")
@@ -25,11 +25,11 @@ public class Prouduct {
     public Prouduct() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
