@@ -17,11 +17,13 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <sf:form modelAttribute="prouduct" action="/prouduct" cssClass="form-group" method="post">
+            <sf:form modelAttribute="prouduct" action="/prouduct" cssClass="form-group" method="post" enctype="multipart/form-data">
                 <label for="name">Name</label>
                 <sf:input path="name" placeholder = "enter name" name = "name" cssClass="form-control" id="name"/><br>
                 <label for="desc">Description</label>
                 <sf:input path="description" placeholder = "enter description" name = "desc" cssClass="form-control" id="desc"/><br>
+                <label for="image">image</label>
+                <sf:input type="file" cssClass="form-control" id="customFile" path="image" name = "image"/><br>
                 <button class="btn btn-primary">Add</button>
             </sf:form>
         </div>

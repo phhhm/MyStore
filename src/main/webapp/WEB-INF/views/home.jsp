@@ -47,11 +47,11 @@
 
             <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="float: left; margin-left: 100px; margin-top: 50px;">
                 <div class="mdl-card__title">
-                    <img src="/resources/images/shoe.jpg" style="width: 350px; height: 175px; float: left">
-                    <h2 class="mdl-card__title-text" style="float: inside;">${prouduct.name}</h2>
+                    <img src="<c:url value='/resources/images/${prouduct.id}.png'/>" style="width: 350px; height: 175px; float: left">
                 </div>
-                <div class="mdl-card__supporting-text">
-                    ${prouduct.description}
+                <div class="mdl-card__supporting-text" align="left">
+                    <h2 class="mdl-card__title-text" style="float: inside;"> name : ${prouduct.name}</h2><br>
+                    <p> description : ${prouduct.description}</p>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
                     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">

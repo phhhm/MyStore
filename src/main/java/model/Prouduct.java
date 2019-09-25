@@ -1,5 +1,7 @@
 package model;
 import org.springframework.lang.NonNull;
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.*;
 
 @Entity
@@ -16,6 +18,9 @@ public class Prouduct {
     @NonNull
     @Column(name = "description")
     private String description;
+
+    @Transient
+    private MultipartFile image;
 
     public Prouduct(String name, String description) {
         this.name = name;
@@ -47,5 +52,13 @@ public class Prouduct {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public MultipartFile getImage() {
+        return image;
+    }
+
+    public void setImage(MultipartFile image) {
+        this.image = image;
     }
 }

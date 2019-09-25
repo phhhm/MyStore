@@ -12,6 +12,7 @@ import org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcesso
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
@@ -36,12 +37,12 @@ public class RootConfig {
         return basicDataSource;
     }
 
-//    @Bean
-//    public CommonsMultipartResolver multipartResolver(){
-//        CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver();
-//        commonsMultipartResolver.setMaxUploadSize(1024000);
-//        return commonsMultipartResolver;
-//    }
+    @Bean
+    public CommonsMultipartResolver multipartResolver(){
+        CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver();
+        commonsMultipartResolver.setMaxUploadSize(1024000);
+        return commonsMultipartResolver;
+    }
 
     @Bean
     public JpaVendorAdapter vendorAdapter() {
