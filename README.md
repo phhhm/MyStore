@@ -5,4 +5,3 @@
 ### Mavean
 ### MySQL
 ### Hibernate
-### JPA
