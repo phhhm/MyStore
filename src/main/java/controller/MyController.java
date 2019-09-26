@@ -36,11 +36,12 @@ public class MyController {
     public String save(Prouduct prouduct, HttpServletRequest request){
         MultipartFile productImage = prouduct.getImage();
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(rootDirectory + "/resources/images/" + prouduct.getId() + ".png");
+        path = Paths.get(rootDirectory + "/resources/images/" + prouduct.getId() + ".jpg");
 
         if (productImage != null && !productImage.isEmpty()) {
             try {
-                productImage.transferTo(new File(path.toString()));
+                File file = new File(path.toString());
+                productImage.transferTo(file);
             } catch (Exception e) {
                 e.printStackTrace();
                 throw new RuntimeException("Product image saving failed", e);

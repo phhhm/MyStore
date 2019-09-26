@@ -47,7 +47,7 @@
 
             <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="float: left; margin-left: 100px; margin-top: 50px;">
                 <div class="mdl-card__title">
-                    <img src="<c:url value='/resources/images/${prouduct.id}.png'/>" style="width: 350px; height: 175px; float: left">
+                    <img src="<c:url value='/resources/images/${prouduct.id}.jpg'/>" style="width: 350px; height: 175px; float: left">
                 </div>
                 <div class="mdl-card__supporting-text" align="left">
                     <h2 class="mdl-card__title-text" style="float: inside;"> name : ${prouduct.name}</h2><br>
